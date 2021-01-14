@@ -13,16 +13,13 @@ class Lesson2 {
      * @return возвращаем только целую часть от полученного результата,
      * хвост отбрасываем без откругления
      */
-    public static void main(String[] args) {
 
-        System.out.println(formula(12));
-    }
 
     static int formula(int x) {
 
-        int y = (int) Math.sqrt(13 * x +13/x);
+     return (int) Math.sqrt(13 * x +13/x);
 
-        return y;
+
     }
 
     /**
@@ -39,24 +36,9 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        String[] words = fullName.split(" ");
+        String[] arr = fullName.toUpperCase().split(" ",3);
+        return  arr[0].charAt(0) +"."+arr[1].charAt(0)+"."+arr[2].charAt(0) + ".";
 
-        words[0] =  words[0].toUpperCase();
-
-        char a =  words[0].charAt(0);
-
-        words[1] = words[1].toUpperCase();
-
-        char b = words[1].charAt(0);
-
-        words[2] = words[2].toUpperCase();
-
-        char c = words[2].charAt(0);
-
-        String fio = a + "." + b + "." + c + ".";
-
-
-        return fio;
     }
 
 }
