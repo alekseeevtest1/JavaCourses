@@ -19,29 +19,14 @@ public class Lesson4_FlowControl {
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        int count = 0;
-        String dubl = null;
-        int a = strings[0].length();
+        int maxLength = strings[0].length();
         String res = null;
-        if (strings.length == 0){
-            return null;
-        }
-        for(int i = 0;i < strings.length;i++){
-
-            if (strings[i].length() > a ){
-                a = strings[i].length();
-
+        for (int i = 0; i < strings.length; i++) {
+            if (strings.length != 0 && strings[i].length() > maxLength ){
+                maxLength = strings[i].length();
                 res = strings[i];
-
-            }else if(strings[i].length() < a ) {
-
-            }else{
-                count++;
-                dubl = res;
             }
-        }
-        if (count != 0){
-            return dubl;
+
         }
         return res;
     }
