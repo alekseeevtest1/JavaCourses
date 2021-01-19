@@ -18,15 +18,23 @@ public class Lesson4_FlowControl {
      *
      * @return самую длинную строку из полученного массива
      */
+    public static void main(String[] args) {
+        String[] strings = {"Тихий дон", "Вишневый сад", "Война и мир", "Мертвые души"};
+        System.out.println(task1(strings));
+    }
+
     public static String task1(String[] strings) {
-        int maxLength = strings[0].length();
-        String res = null;
-        for (int i = 0; i < strings.length; i++) {
-            if (strings.length != 0 && strings[i].length() > maxLength ){
-                maxLength = strings[i].length();
+        int i = 0;
+        String res = "";
+        for(String test : strings){
+
+            if (test.length() >= strings[i].length()){
+                strings[i] = test;
+
+            }else {
                 res = strings[i];
             }
-
+            i = (strings.length - 1 > i) ? i++ : strings.length - 1;
         }
         return res;
     }
