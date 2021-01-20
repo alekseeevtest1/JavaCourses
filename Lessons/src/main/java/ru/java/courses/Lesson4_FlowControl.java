@@ -19,17 +19,13 @@ public class Lesson4_FlowControl {
 
 
     public static String task1(String[] strings) {
-        int i = 0;
         String res = "";
         for(String a : strings){
 
             if (a.length() > res.length()){
                 res = a;
 
-            }else {
-
             }
-
         }
         return res;
     }
