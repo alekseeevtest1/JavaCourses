@@ -1,7 +1,5 @@
 package ru.java.courses;
 
-import java.sql.SQLOutput;
-
 public class Lesson4_FlowControl {
 
     /**
@@ -18,23 +16,20 @@ public class Lesson4_FlowControl {
      *
      * @return самую длинную строку из полученного массива
      */
-    public static void main(String[] args) {
-        String[] strings = {"Тихий дон", "Вишневый сад", "Война и мир", "Мертвые души"};
-        System.out.println(task1(strings));
-    }
+
 
     public static String task1(String[] strings) {
         int i = 0;
         String res = "";
-        for(String test : strings){
+        for(String a : strings){
 
-            if (test.length() >= strings[i].length()){
-                strings[i] = test;
+            if (a.length() > res.length()){
+                res = a;
 
             }else {
-                res = strings[i];
+
             }
-            i = (strings.length - 1 > i) ? i++ : strings.length - 1;
+
         }
         return res;
     }
