@@ -2,13 +2,13 @@ package HomeWork2;
 
 public class Fish {
 
-    protected String name;
+    private String name;
 
-    protected byte weight;
+    private byte weight;
 
-    protected float money;
+    private float money;
 
-    protected boolean noHead;
+    private boolean noHead;
 
     public String getName() {
         return name;
